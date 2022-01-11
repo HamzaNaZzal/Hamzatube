@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="test.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hamzatube</title>
+  </head>
+  <body>
+    <style>
+      root,
+      html {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      body {
+        background-color: #0cbaba;
+        background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+        margin: -25px 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+      }
+
+      .button {
+        background-color: #4caf50;
+        border: none;
+        color: rgb(255, 0, 0);
+        padding: 13px 28px;
+        text-align: center;
+        text-decoration: burlywood;
+        display: inline-block;
+        font-size: 18px;
+        margin: 16px 55px;
+        cursor: pointer;
+        box-sizing: border-box;
+        background-color: #eec0c6;
+      }
+
+      .wrapper {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      .button:hover {
+        background-color: #7f5a83;
+      }
+    </style>
+    <div class="wrapper">
+      <div style="transform: translateY(25vh)">
+        <h1 style="text-align: center">Hi Im hamza</h1>
+        <div style="text-align: center">
+          <a style="text-align: center" href="test2.html" class="button"
+            >Go to hamzatube</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const wrapper = document.querySelector(".wrapper");
+    const h1 = document.querySelector("h1");
+    const colors = ["#FF141450", "#1414FF50", "#14FF1450"];
+    const colorsH1 = ["blue", "red", "white"];
+    let currentColor = 0;
+
+    setInterval(() => {
+      wrapper.style.backgroundColor = colors[currentColor];
+      h1.style.color = colorsH1[currentColor];
+      currentColor += 1;
+      currentColor %= 3;
+    }, 500);
+  </script>
+</html>
